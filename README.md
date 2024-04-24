@@ -54,7 +54,7 @@ If you use this project or dataset in your research, please cite it as follows:
 
 @article{li2024discdiff,
   title={DiscDiff: Latent Diffusion Model for DNA Sequence Generation},
-  author={Li, Zehui and Ni, Yuhao and Beardall, William AV and Xia, Guoxuan and Das, Akashaditya and Stan, Guy-Bart and Zhao, Yiren},
+  author={Li, Zehui and Ni, Yuhao and Beardall, William AV and Xia, Guoxuan and Das, Akashaditya and Huygelen, Tim August B and Stan, Guy-Bart and Zhao, Yiren},
   journal={arXiv preprint arXiv:2402.06079},
   year={2024}
 }
