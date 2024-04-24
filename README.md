@@ -10,7 +10,7 @@ Access the dataset used to replicate the results presented in the paper at Huggi
     ```
 2. Install the required packages: diffusers, accelerate
    ```sh
-   pip install diffusers accelerate
+   pip install torch torchvision diffusers accelerate einops easydict pytorch_lightning
    ```
 ### Code Usage
 
@@ -25,7 +25,7 @@ https://zenodo.org/records/11061611
 Set the path to the pretrained vae model and unet model in the following command. The number of sequences to generate can be set using the sequence_num argument in ```src/configs/generate.yaml```.
 
 ```
-accelerate launch --main_process_port 12903 --multi_gpu main.py --model generate --gen_vae_path="" --gen_unet_path=""
+CUDA_VISIBLE_DEVICES="0" accelerate launch --main_process_port 12903 --multi_gpu main.py --model generate --gen_vae_path="" --gen_unet_path=""
 ```
 
 
