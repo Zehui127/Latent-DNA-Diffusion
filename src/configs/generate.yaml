@@ -1,0 +1,26 @@
+# train config
+trainer_cfg:
+  output_dir: "eval_logs"
+  sequence_num: 4000
+  batch_size: 1000
+
+# data loader config
+loader_cfg:
+  data_path: ""
+  batch_size: 256
+  num_workers: 5
+  num_processes: 2
+  train_prop: 0.9
+  valid_prop: 0.1
+  shuffle: True
+  seed: 50
+
+# U-Net model config
+model_cfg:
+  sample_size: 16
+  in_channels: 16
+  out_channels: 16
+  layers_per_block: 8
+  block_out_channels: [256, 256, 512, 512]
+  down_block_types: ["DownBlock2D", "DownBlock2D", "AttnDownBlock2D", "DownBlock2D", ]
+  up_block_types: ["UpBlock2D", "AttnUpBlock2D", "UpBlock2D", "UpBlock2D", ]

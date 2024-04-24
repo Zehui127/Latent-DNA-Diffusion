@@ -1,0 +1,31 @@
+trainer_cfg:
+  image size: 16
+  epoch: 3000
+  gradient_accumulation_steps: 1
+  lr: 0.00005
+  lr_warmup_steps: 500
+  save_image_epochs: 10
+  save_model_epochs: 30
+  mixed_precision: "fp16"
+  output_dir: "train_logs"
+  seed: 0
+
+loader_cfg:
+  data_path: "" # this should be the torch pt file path containing the one-hot encoded DNA sequences
+  batch_size: 256
+  num_workers: 10
+  num_processes: 2
+  train_prop: 0.95
+  valid_prop: 0.05
+  shuffle: True
+  seed: 50
+
+model_cfg:
+  sample_size: 16
+  in_channels: 16
+  out_channels: 16
+  layers_per_block: 8
+  block_out_channels: [256, 256, 512, 512]
+  down_block_types: ["DownBlock2D", "DownBlock2D", "AttnDownBlock2D", "DownBlock2D", ]
+  up_block_types: ["UpBlock2D", "AttnUpBlock2D", "UpBlock2D", "UpBlock2D", ]
+  # vae_path: ""  # this should be the path to the trained VAE model

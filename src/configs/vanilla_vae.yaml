@@ -1,0 +1,22 @@
+trainer_cfg:
+  epoch: 1200
+  learning_rate: 0.0001
+
+loader_cfg:
+  data_path: "" # this should be the torch pt file path containing the one-hot encoded DNA sequences
+  batch_size: 64
+  num_workers: 5
+  num_processes: 4
+  train_prop: 0.8
+  valid_prop: 0.2
+  shuffle: True
+  seed: 50
+
+model_cfg:
+  in_channel: 1
+  latent_dim: 256
+  hidden_dims: [8, 16, 32]
+  seq2img_num_layers: 4
+  seq2img_img_width: 128
+  kld_weight: 1
+  layer_per_block: 0
