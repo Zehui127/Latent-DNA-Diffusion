@@ -14,6 +14,12 @@ Access the dataset used to replicate the results presented in the paper at Huggi
    ```
 ### Code Usage
 
+#### Download pre-trained models
+
+A pre-trained vae model and unet model can be downloaded from the following links:
+
+https://zenodo.org/records/11061611
+
 #### Generate DNA sequences using the trained diffusion model
 
 Set the path to the pretrained vae model and unet model in the following command. The number of sequences to generate can be set using the sequence_num argument in ```src/configs/generate.yaml```.
@@ -58,3 +64,4 @@ If you use this project or dataset in your research, please cite it as follows:
   journal={arXiv preprint arXiv:2402.06079},
   year={2024}
 }
+CUDA_VISIBLE_DEVICES="1" accelerate launch --main_process_port 12903 --multi_gpu main.py --model generate --gen_vae_path="/mnt/models/zl6222/dna_diffusion/saved_models/vae_9939_2023-09-21_15-31-56_best_model.pth" --gen_unet_path="/mnt/models/zl6222/dna_diffusion/saved_models/2023-09-24_23-57-45_score_func_500.pth"
