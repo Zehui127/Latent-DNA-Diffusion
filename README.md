@@ -1,3 +1,10 @@
+### News
+Please check our new paper:
+
+Absorb \& Escape: Overcoming Single Model Limitations in Generating Genomic Sequences (Neural Information Processing Systems, 2024) [Paper Link](https://arxiv.org/abs/2410.21345)
+
+
+
 ### Dataset Access
 Access the dataset used to replicate the results presented in the paper at Hugging Face:
 [Latent DNA Diffusion Dataset](https://huggingface.co/datasets/Zehui127127/latent-dna-diffusion)
